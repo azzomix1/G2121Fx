@@ -21,9 +21,9 @@ function header() {
       <span class="brand-copy">Дмитрий Юрьев<small>${current.subtitle}</small></span>
     </a>
     <nav id="main-nav" class="main-nav" aria-label="Главная навигация">
-      ${concept === 'balance' ? '<a href="#diplomas">Дипломы</a><a href="#reviews">Отзывы</a><a href="#photos">Фото</a><a href="#subscriptions">Абонементы</a><a href="#certificates">Подарочные сертификаты</a><a href="#contacts">Контакты</a>' : '<a href="#about">Обо мне</a><a href="#services">Массаж</a><a href="#approach">Подход</a><a href="#questions">Вопросы</a>'}
+      ${concept === 'balance' ? '<a role="link" aria-disabled="true">Дипломы</a><a href="#reviews">Отзывы</a><a href="#photos">Фото</a><a href="#subscriptions">Абонементы</a><a href="#certificates">Подарочные сертификаты</a><a href="#contacts">Контакты</a>' : '<a href="#about">Обо мне</a><a href="#services">Массаж</a><a href="#approach">Подход</a><a href="#questions">Вопросы</a>'}
     </nav>
-    ${concept === 'balance' ? `<a class="header-booking" href="tel:+79130002721">Запись по телефону ${icon('phone')}</a>` : `<button class="header-booking" data-booking>Записаться ${icon('arrow-up-right')}</button>`}
+    ${concept === 'balance' ? `<a class="header-booking" role="link" aria-disabled="true">Онлайн-запись ${icon('calendar-days')}</a>` : `<button class="header-booking" data-booking>Записаться ${icon('arrow-up-right')}</button>`}
     <button class="menu-button icon-button" aria-expanded="false" aria-controls="main-nav" aria-label="Открыть меню">${icon('menu')}</button>
   </header>`;
 }
@@ -121,11 +121,10 @@ function practiceContent() {
   return `<section class="practice-section section-space wrap" aria-labelledby="practice-title">
     <div class="section-heading"><div><span class="section-index">ПРИЁМ СПЕЦИАЛИСТА</span><h2 id="practice-title">Остеопатия<br>и медицинский массаж</h2></div><p>Методы работы подбираются индивидуально<br>с учётом состояния здоровья,<br>показаний и противопоказаний.</p></div>
     <div class="practice-copy"><h3>Порядок приёма</h3><p>Консультация включает осмотр, остеопатическое тестирование и оценку результатов МРТ при их наличии.</p><p>В зависимости от ситуации применяются остеопатическая коррекция, медицинский массаж, мягкие мануальные и висцеральные техники. План работы обсуждается до начала приёма.</p></div>
-    <details class="practice-question"><summary>Что необходимо сообщить перед приёмом? ${icon('plus')}</summary><p>Сообщите о текущих заболеваниях, травмах, операциях и рекомендациях лечащего врача. При наличии возьмите результаты обследований. Возможность проведения процедур определяется с учётом противопоказаний.</p></details>
   </section>
   <div class="trust-strip"><div class="wrap trust-grid">
-    <section id="diplomas" class="trust-item" aria-labelledby="diplomas-title"><h2 id="diplomas-title">Дипломы</h2><a class="text-link" role="link" aria-disabled="true">Образование и сертификаты ${icon('arrow-up-right')}</a></section>
     <section id="reviews" class="trust-item" aria-labelledby="reviews-title"><h2 id="reviews-title">Отзывы</h2><a class="text-link" role="link" aria-disabled="true">Отзывы на ПроДокторов ${icon('arrow-up-right')}</a></section>
+    <section id="prices" class="trust-item" aria-labelledby="prices-title"><h2 id="prices-title">Стоимость услуг</h2><a class="text-link" role="link" aria-disabled="true">Посмотреть стоимость ${icon('arrow-up-right')}</a></section>
   </div></div>
   <section id="photos" class="photos-section section-space"><div class="wrap"><div class="section-heading"><div><span class="section-index">КАБИНЕТ И РАБОТА СПЕЦИАЛИСТА</span><h2>Фото</h2></div></div><div class="practice-gallery">
     <a href="assets/balance.jpg" target="_blank" rel="noopener" aria-label="Открыть фото: остеопатический приём"><img src="assets/balance.jpg" alt="Дмитрий Юрьев во время приёма в кабинете" loading="lazy" width="1920" height="1280"></a>
@@ -134,8 +133,12 @@ function practiceContent() {
   </div></div></section>
   <section id="subscriptions" class="section-space wrap information-row"><div><span class="section-index">ПОСЕЩЕНИЕ СПЕЦИАЛИСТА</span><h2>Абонементы</h2></div><div class="information-copy"><p>Условия приобретения, количество приёмов, стоимость и срок действия абонемента можно уточнить по телефону.</p><a class="text-link" href="tel:+79130002721">Уточнить условия ${icon('phone')}</a></div></section>
   <section id="certificates" class="certificate-section section-space"><div class="wrap information-row"><div><span class="section-index">ПОДАРОЧНЫЕ СЕРТИФИКАТЫ</span><h2>Подарочные<br>сертификаты</h2></div><div class="information-copy"><p>Номинал, срок действия и порядок оформления подарочного сертификата уточняйте по телефону. Перед использованием необходимо учитывать противопоказания к процедурам.</p><a class="text-link" href="tel:+79130002721">Уточнить условия ${icon('phone')}</a></div></div></section>
-  <section id="contacts" class="practice-contacts section-space"><div class="wrap information-row"><div><span class="section-index">ЗАПИСЬ НА ПРИЁМ</span><h2>Контакты</h2><a class="contact-phone" href="tel:+79130002721">+7-913-000-27-21</a></div><div class="information-copy"><h3>Новосибирск, ул. Нижегородская, 18</h3><p>Метро «Октябрьская».<br>Массажный центр Mass Medica.</p><p>Приём по предварительной записи.</p><a class="text-link" href="https://yandex.ru/maps/?text=Новосибирск%2C%20Нижегородская%2018%20Mass%20Medica" target="_blank" rel="noopener">Открыть адрес на карте ${icon('arrow-up-right')}</a></div></div></section>
-  <footer class="site-footer wrap"><a class="footer-name" href="#">Юрьев Дмитрий Валерьевич<span>Остеопатия и массаж в Новосибирске</span></a><p>Имеются противопоказания. Необходима консультация специалиста.<br>Информация на сайте не является публичной офертой.</p></footer>`;
+  <section id="contacts" class="practice-contacts section-space"><div class="wrap information-row"><div><span class="section-index">ЗАПИСЬ НА ПРИЁМ</span><h2>Контакты</h2><a class="contact-phone" href="tel:+79130002721">+7-913-000-27-21</a><nav class="messenger-links" aria-label="Написать в мессенджере">
+    <a href="https://max.ru/u/f9LHodD0cOIzEonDq6VWiD3lzLXOnBO1e0lJwWPNoPPOwvXJeKhLbxDGxgk" target="_blank" rel="noopener noreferrer">${icon('message-circle')}MAX</a>
+    <a href="https://t.me/+79130002721" target="_blank" rel="noopener noreferrer">${icon('send')}Telegram</a>
+    <a href="https://wa.me/79130002721" target="_blank" rel="noopener noreferrer">${icon('message-circle')}WhatsApp</a>
+  </nav></div><div class="information-copy"><h3>Новосибирск, ул. Нижегородская, 18</h3><p>Метро «Октябрьская».<br>Массажный центр Mass Medica.</p><p>Приём по предварительной записи.</p><a class="text-link" href="https://yandex.ru/maps/?text=Новосибирск%2C%20Нижегородская%2018%20Mass%20Medica" target="_blank" rel="noopener">Открыть адрес на карте ${icon('arrow-up-right')}</a></div></div></section>
+  <footer class="site-footer wrap"><a class="footer-name" href="#">Юрьев Дмитрий Валерьевич<span>Остеопатия и массаж в Новосибирске</span></a><p>Имеются противопоказания. Необходима консультация специалиста.<br>Информация на сайте не является офертой.<br><a class="offer-link" role="link" aria-disabled="true">Договор публичной оферты</a></p></footer>`;
 }
 
 document.getElementById('site').innerHTML = `${header()}<main id="main">${heroes[concept]}${concept === 'balance' ? practiceContent() : `${about()}${services()}${approach()}${questions()}${footer()}`}</main>${concept === 'balance' ? `<button class="scroll-top icon-button" aria-label="Наверх" title="Наверх" hidden>${icon('arrow-up')}</button>` : ''}`;
@@ -175,7 +178,7 @@ function closeMenu() {
   menuButton.setAttribute('aria-label', 'Открыть меню');
   mainNav.classList.remove('is-open');
 }
-mainNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+mainNav.querySelectorAll('a[href]').forEach((link) => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeMenu();
 });

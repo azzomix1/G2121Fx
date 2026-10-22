@@ -23,7 +23,7 @@ function header() {
     <nav id="main-nav" class="main-nav" aria-label="Главная навигация">
       ${concept === 'balance' ? '<a role="link" aria-disabled="true">Дипломы</a><a href="#reviews">Отзывы</a><a href="#photos">Фото</a><a href="#subscriptions">Абонементы</a><a href="#certificates">Подарочные сертификаты</a><a href="#contacts">Контакты</a>' : '<a href="#about">Обо мне</a><a href="#services">Массаж</a><a href="#approach">Подход</a><a href="#questions">Вопросы</a>'}
     </nav>
-    ${concept === 'balance' ? `<a class="header-booking" role="link" aria-disabled="true">Онлайн-запись ${icon('calendar-days')}</a>` : `<button class="header-booking" data-booking>Записаться ${icon('arrow-up-right')}</button>`}
+    ${concept === 'balance' ? `<a class="header-booking" href="https://n830408.yclients.ru/company/659827/personal/menu?o=" target="_blank" rel="noopener noreferrer">Онлайн-запись ${icon('calendar-days')}</a>` : `<button class="header-booking" data-booking>Записаться ${icon('arrow-up-right')}</button>`}
     <button class="menu-button icon-button" aria-expanded="false" aria-controls="main-nav" aria-label="Открыть меню">${icon('menu')}</button>
   </header>`;
 }

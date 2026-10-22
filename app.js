@@ -123,7 +123,7 @@ function practiceContent() {
     <div class="practice-copy"><h3>Порядок приёма</h3><p>Консультация включает осмотр, остеопатическое тестирование и оценку результатов МРТ при их наличии.</p><p>В зависимости от ситуации применяются остеопатическая коррекция, медицинский массаж, мягкие мануальные и висцеральные техники. План работы обсуждается до начала приёма.</p></div>
   </section>
   <div class="trust-strip"><div class="wrap trust-grid">
-    <section id="reviews" class="trust-item" aria-labelledby="reviews-title"><h2 id="reviews-title">Отзывы</h2><a class="text-link" role="link" aria-disabled="true">Отзывы на ПроДокторов ${icon('arrow-up-right')}</a></section>
+    <section id="reviews" class="trust-item" aria-labelledby="reviews-title"><h2 id="reviews-title">Отзывы</h2><a class="text-link" href="https://prodoctorov.ru/novosibirsk/vrach/202379-yurev/" target="_blank" rel="noopener noreferrer">Отзывы на ПроДокторов ${icon('arrow-up-right')}</a></section>
     <section id="prices" class="trust-item" aria-labelledby="prices-title"><h2 id="prices-title">Стоимость услуг</h2><a class="text-link" role="link" aria-disabled="true">Посмотреть стоимость ${icon('arrow-up-right')}</a></section>
   </div></div>
   <section id="photos" class="photos-section section-space"><div class="wrap"><div class="section-heading"><div><span class="section-index">КАБИНЕТ И РАБОТА СПЕЦИАЛИСТА</span><h2>Фото</h2></div></div><div class="practice-gallery">
